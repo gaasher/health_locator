@@ -17,7 +17,7 @@ import googlemaps
 
 
 
-def mapNearbyLocations(address):
+def mapNearbyLocations(address:str, doctype:str):
     locations = [] #python uses hashmap
     gmaps = googlemaps.Client(key=PLACES_API)
     response = gmaps.geocode(address)[0]
@@ -25,7 +25,7 @@ def mapNearbyLocations(address):
     geometry = response['geometry']
 
     location = (geometry['location']['lat'], geometry['location']['lng'])
-    search_string= "mental health clinic or hospital"
+    search_string= doctype
 
     results = gmaps.places_nearby(
         location=location,
@@ -34,7 +34,6 @@ def mapNearbyLocations(address):
     )
 
     for loc in results['results']:
-        print(loc)
         try:
             t = LocInfo.objects.get_or_create(
                 Name=loc['name'], 
@@ -53,7 +52,8 @@ def mapNearbyLocations(address):
 def RetrievalAPI(request):
     if request.method == "GET":
         address = request.GET['addy']
-        locations_data = mapNearbyLocations(address)
+        doctype = request.GET['doctype']
+        locations_data = mapNearbyLocations(address, doctype)
         locations_serializer = LocInfoSerializer(locations_data, many=True)
         return JsonResponse(locations_serializer.data, safe=False)
 
