@@ -7,4 +7,5 @@ class LocInfoSerializer(serializers.ModelSerializer):
             fields = ('Name',
                       'PlaceId',
                       'Rating',
-                      'StreetAddress')
+                      'StreetAddress',
+                      'DocType')

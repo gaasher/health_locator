@@ -39,7 +39,8 @@ def mapNearbyLocations(address:str, doctype:str):
                 Name=loc['name'], 
                 PlaceId=loc['place_id'], 
                 Rating=loc['rating'],
-                StreetAddress=loc['vicinity']
+                StreetAddress=loc['vicinity'],
+                DocType=search_string
                 )   
             locations.append(t[0])
         except LocInfo.DoesNotExist:
@@ -51,12 +52,9 @@ def mapNearbyLocations(address:str, doctype:str):
 @csrf_exempt
 def RetrievalAPI(request):
     if request.method == "GET":
-        address = request.GET['addy']
-        doctype = request.GET['doctype']
+        address = request.GET.get('addy')
+        doctype = request.GET.get('doctype')
         locations_data = mapNearbyLocations(address, doctype)
         locations_serializer = LocInfoSerializer(locations_data, many=True)
         return JsonResponse(locations_serializer.data, safe=False)
 
-#def returnResults
-#function that gets the entry that corresponds to the specific time from the database
-#calls the google places api so that it returns the places in a given area

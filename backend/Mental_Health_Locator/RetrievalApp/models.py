@@ -6,3 +6,4 @@ class LocInfo(models.Model):
     PlaceId = models.CharField(max_length=200, primary_key=True)
     Rating = models.FloatField()
     StreetAddress = models.CharField(max_length=200)
+    DocType = models.CharField(max_length=200)
