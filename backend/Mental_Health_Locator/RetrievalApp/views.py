@@ -35,7 +35,6 @@ def mapNearbyLocations(address:str, doctype:str):
 
     for loc in results['results']:
         try:
-            print(loc)
             t = LocInfo.objects.get_or_create(
                 Name=loc['name'], 
                 PlaceId=loc['place_id'], 
