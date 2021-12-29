@@ -15,7 +15,7 @@ from RetrievalApp.serializers import LocInfoSerializer
 
 import googlemaps
 
-
+from django.db import IntegrityError
 
 def mapNearbyLocations(address:str, doctype:str):
     locations = [] #python uses hashmap
@@ -35,6 +35,7 @@ def mapNearbyLocations(address:str, doctype:str):
 
     for loc in results['results']:
         try:
+            print(loc)
             t = LocInfo.objects.get_or_create(
                 Name=loc['name'], 
                 PlaceId=loc['place_id'], 
@@ -43,8 +44,10 @@ def mapNearbyLocations(address:str, doctype:str):
                 DocType=search_string
                 )   
             locations.append(t[0])
-        except LocInfo.DoesNotExist:
-            pass
+        except IntegrityError as e:
+            if 'unique constraint' in e.args[0]:
+                t = LocInfo.objects.get(PlaceId=loc['place_id'])
+                locations.append(t[0])
     return locations
 
 
