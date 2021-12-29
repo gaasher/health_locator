@@ -1,4 +1,4 @@
-import Home from "./containers/Home.js";
+import Home from "./containers/Home";
 import ResultList from "./components/ResultList";
 import {Route, BrowserRouter, Routes} from "react-router-dom"
 
