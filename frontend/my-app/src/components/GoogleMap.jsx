@@ -40,9 +40,7 @@ export default class AutocompleteLocation extends Component {
                 className: 'location-search-input',
               })}
             />
-            <div className="autocomplete-dropdown-container" style={{
-              position:'relative',
-            }}>
+            <div className="autocomplete-dropdown-container">
               {loading && <div style={{
               }}></div>}
               {suggestions.map(suggestion => {

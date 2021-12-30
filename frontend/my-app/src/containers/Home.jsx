@@ -27,19 +27,15 @@ class Home extends Component{
         return(
             <body className="bodyhome">
                 <div className="searchbar">
-                    <AutocompleteLocation updateSearchData={this.updateSearchData}/>
-                </div>
-                <div className="searchbuttondiv">
-                    <Link to={'/results/'} 
-                    state={{ baseaddress: this.state.address,
-                             doctype: this.state.doctype}}>
-                        <Button className="searchbutton">
-                            Search
-                        </Button>
-                    </Link>
-                </div>
-                <div>
                     <Dropdown updateDocType={this.updateDocType} doctypes={this.state.doctypes}/>
+                    <AutocompleteLocation updateSearchData={this.updateSearchData}/>
+                    <div className="searchbuttondiv">
+                        <Link to={'/results/'} 
+                        state={{ baseaddress: this.state.address,
+                                doctype: this.state.doctype}}>
+                            <Button className="searchbutton"></Button>
+                        </Link>
+                    </div>
                 </div>
             </body>
         )
