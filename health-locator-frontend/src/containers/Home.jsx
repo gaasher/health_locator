@@ -10,7 +10,8 @@ class Home extends Component{
         super(props);
         this.state= { address : '',
                       doctype : '',
-                      doctypes : ['Cardiologist', 'Therapist', 'Psychiatrist']};
+                      doctypes : ['Cardiologist', 'Therapist', 'Psychiatrist', 'Ophthalmologist',
+                                  'Neurologist', 'OBGYN']};
     }
     
     updateSearchData = (data) =>{
@@ -24,19 +25,21 @@ class Home extends Component{
     render(){
 
         return(
-            <body className="bodyhome">
-                <div className="title"> 
-                    <span> Find your Doc </span>
-                </div>
-                <div className="searchbar">
-                    <Dropdown updateDocType={this.updateDocType} doctypes={this.state.doctypes}/>
-                    <AutocompleteLocation updateSearchData={this.updateSearchData}/>
-                    <div className="searchbuttondiv">
-                        <SearchButton baseaddress={this.state.address} doctype={this.state.doctype} 
-                            condition={this.state.address !== '' && this.state.doctype !== ''}/>
+            <div className="background-container">
+                <body className="bodyhome">
+                    <div className="title"> 
+                        <span> Find your Doc </span>
                     </div>
-                </div>
-            </body>
+                    <div className="searchbar">
+                        <Dropdown updateDocType={this.updateDocType} doctypes={this.state.doctypes}/>
+                        <AutocompleteLocation updateSearchData={this.updateSearchData}/>
+                        <div className="searchbuttondiv">
+                            <SearchButton baseaddress={this.state.address} doctype={this.state.doctype} 
+                                condition={this.state.address !== '' && this.state.doctype !== ''}/>
+                        </div>
+                    </div>
+                </body>
+            </div>
         )
     }
 

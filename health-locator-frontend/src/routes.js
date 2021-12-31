@@ -1,5 +1,5 @@
 import Home from "./containers/Home";
-import ResultList from "./components/ResultList";
+import ResultPage from "./containers/ResultPage";
 import {Route, BrowserRouter, Routes} from "react-router-dom"
 
 
@@ -8,7 +8,7 @@ export default function NavRoutes(){
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<Home />}/>
-                <Route path='/results/' element={<ResultList />} />
+                <Route path='/results/' element={<ResultPage />} />
             </Routes>
         </BrowserRouter>
     )
