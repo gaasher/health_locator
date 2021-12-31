@@ -1,9 +1,8 @@
 import { Component } from "react";
 import AutocompleteLocation from "../components/GoogleMap";
-import { Button } from "react-bootstrap";
-import { NavLink, Link } from "react-router-dom"
 import './Home.css'
 import Dropdown from "../components/Dropdown";
+import SearchButton from '../components/SearchButton';
 
 
 class Home extends Component{
@@ -26,15 +25,15 @@ class Home extends Component{
 
         return(
             <body className="bodyhome">
+                <div className="title"> 
+                    <span> Find your Doc </span>
+                </div>
                 <div className="searchbar">
                     <Dropdown updateDocType={this.updateDocType} doctypes={this.state.doctypes}/>
                     <AutocompleteLocation updateSearchData={this.updateSearchData}/>
                     <div className="searchbuttondiv">
-                        <Link to={'/results/'} 
-                        state={{ baseaddress: this.state.address,
-                                doctype: this.state.doctype}}>
-                            <Button className="searchbutton"></Button>
-                        </Link>
+                        <SearchButton baseaddress={this.state.address} doctype={this.state.doctype} 
+                            condition={this.state.address !== '' && this.state.doctype !== ''}/>
                     </div>
                 </div>
             </body>

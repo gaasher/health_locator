@@ -41,8 +41,7 @@ export default class AutocompleteLocation extends Component {
               })}
             />
             <div className="autocomplete-dropdown-container">
-              {loading && <div style={{
-              }}></div>}
+              {loading && <div></div>}
               {suggestions.map(suggestion => {
                 const className = suggestion.active
                   ? 'suggestion-item--active'

@@ -1,36 +1,50 @@
 input {
+    box-sizing: border-box;
     width: 100%;
-    height: 100%;
-    text-align: center;
+    height: 60px;
     font-family: -apple-system;
-    align-items: center;
     font-size: 1.25rem;
     background-color: #fcfbf4;
+    border-width: 1px;
+    border-color: black;
+    outline:none;
+    text-align: center;
+}
+
+input[type='text' i] {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
 }
 
 .autocomplete-dropdown-container {
     text-align: center;
     text-overflow: ellipsis;
     padding-right: 25%;
-    width: 100%;
+    width: 100%;    
 }
 
 .input-suggestion{
-    font-family: 'Lato', sans-serif;
+    font-family: -apple-system;
     width: 100%;
-    height: 50px;
-    border-radius: 5px;
+    height: 60px;
     display: flex;
     align-items: center;
-    font-size: 1rem;
-    font-weight: bold;
-    color: black;
+    text-align: left;
+    font-size: 1.25rem;
+    text-overflow: ellipsis;
+    font-weight:lighter;
+    text-indent: 1rem;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    box-sizing: border-box;
   }
 
 .inputbox {
-    height: 3rem;
-    padding-bottom: .5rem;
-    width: 60%;
+    height: 60px;
+    width: 800px;
     align-items: center;
-
+    border-width: 0px;
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Button } from "react-bootstrap";
 import './Dropdown.css';
+import shortid from 'shortid';
 
 function Dropdown( {updateDocType, doctypes} ){
     const dropdownRef = useRef(null);
@@ -42,11 +43,13 @@ function Dropdown( {updateDocType, doctypes} ){
                 <ul>
                     {doctypes.map(doctype => {
                         return (
-                            <li className=""> 
-                                <Button onClick={() => {
-                                    updateDocType(doctype);
-                                    setDocType(doctype);
-                                    }}> {doctype} </Button>
+                            <li> 
+                                <div key={shortid.generate()}>
+                                    <Button onClick={() => {
+                                        updateDocType(doctype);
+                                        setDocType(doctype);
+                                        }}> {doctype} </Button>
+                                </div>
                             </li>
                         )
                     })}
