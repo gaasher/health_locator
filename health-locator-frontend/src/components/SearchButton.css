@@ -1,0 +1,19 @@
+.searchbuttondiv{
+	width: 60px;
+	height: 60px;
+	
+	transform: translateX(-100%);
+
+}
+
+.searchbutton {
+    width: 60px;
+    height: 60px;
+    background-image: url('../images/search_icon.png');
+	background-color: transparent;
+	cursor: pointer;
+	border:none;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 60%;
+}
