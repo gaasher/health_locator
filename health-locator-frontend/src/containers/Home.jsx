@@ -38,6 +38,9 @@ class Home extends Component{
                                 condition={this.state.address !== '' && this.state.doctype !== ''}/>
                         </div>
                     </div>
+                    <div className="githublogo">
+                        <a className='githublink' href='https://github.com/gaasher/health_locator' aria-label="github"/>
+                    </div>
                 </body>
             </div>
         )

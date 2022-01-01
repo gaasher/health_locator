@@ -1,7 +1,6 @@
-import React, { Component, propTypes, useState, useEffect } from 'react';
-import { Card } from 'react-bootstrap';
-import { useLocation } from 'react-router-dom';
-import { useRef } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Card, Button } from 'react-bootstrap';
+import { useLocation, Link } from 'react-router-dom';
 import './ResultList.css'
 
 
@@ -30,8 +29,19 @@ function ResultList() {
 
     if (resultlist.length == 0 && loaded){
         return(
-            <div>
-                <span> No results found </span>
+            <div className='display-noresults'>
+                    <div className='body'>
+                        <hr className='hr-div' />
+                        <span className='span-noresults'>
+                            <a> Sorry, no results matched your query! </a> 
+                        </span>
+                        <hr className='hr-div' />
+                        <div className='home'>
+                            <a href='/' className='buttondiv'>
+                                <span className='buttontext'> Search Here </span>
+                            </a>
+                    </div>
+                </div>
             </div>
         )
     }

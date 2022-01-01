@@ -1,6 +1,7 @@
 .page-background {
-    background-size: cover;
     background-color:lightblue;
+    width: 100%;
+    height: fit-content;
 }
 
 .list-container {

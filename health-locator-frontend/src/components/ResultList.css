@@ -1,3 +1,68 @@
+
+.home {
+    width: 100%;
+    height: 20vh;
+}
+
+.buttondiv {
+    display: inline-block;
+    margin-top: 4vh;
+    padding-top: 2vh;
+    height: 6vh;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color:#ff787f;
+    border-width: 2px;
+    border:solid;
+    border-color: black;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: wavy;
+}
+
+.buttontext {
+    font-family: -apple-system;
+    font-size: 4vh;
+    font-weight: lighter;
+    color:black;
+}
+
+.homebutton {
+    width: 30%;
+    height: 50%;
+    margin-left: 35%;
+    margin-right: 35%;
+    align-items: center;
+}
+
+.display-noresults{
+    height: 100vh;
+}
+
+.body {
+    padding-top: 20vh;
+}
+
+.hr-div {
+    background-color: black;
+    border: none;
+    height: .5vh;
+}
+
+.span-noresults {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+    margin-right: 25%;
+    margin-left: 25%;
+    font-family: -apple-system;
+    font-size: 4vh;
+    font-weight: lighter;
+}
+
 .cardstyle {
     display: flex;
     height: 280px;

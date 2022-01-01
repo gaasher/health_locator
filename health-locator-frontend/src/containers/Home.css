@@ -32,6 +32,24 @@
 	justify-content: center;
 }
 
+.githublogo {
+	width: 5vh;
+	height: 5vh;
+	transform: translate(80vh, 40vh);
+	position:absolute;
+	background-image: url('../images/github.png');
+	background-size: contain;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.githublink {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+
+}
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
