@@ -1,18 +1,18 @@
 .title {
 	font-family: -apple-system;
-	font-size: 5rem;
+	font-size: 12vh;
 	font-weight: lighter;
 	display: flex;
 	align-content: center;
 	position: absolute;
-	transform: translateY(-200%);
+	transform: translateY(-24vh);
 	outline-style:groove;
-	outline-offset: 40px;
+	outline-offset: 4vh;
 }
 
 .searchbar{
     text-align: left;
-	width: fit-content;
+	width: 100vh;
 	height: fit-content;
 	display:inline-flex;
 	flex-direction: row;
@@ -27,6 +27,7 @@
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
+	width: 100%;
 	align-items: center;
 	display: flex;
 	justify-content: center;
@@ -35,12 +36,13 @@
 .githublogo {
 	width: 5vh;
 	height: 5vh;
-	transform: translate(80vh, 40vh);
 	position:absolute;
 	background-image: url('../images/github.png');
 	background-size: contain;
 	background-color: transparent;
 	cursor: pointer;
+	bottom: 2vh;
+	right: 5vh;	
 }
 
 .githublink {

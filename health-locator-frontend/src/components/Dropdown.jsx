@@ -7,7 +7,7 @@ function Dropdown( {updateDocType, doctypes} ){
     const dropdownRef = useRef(null);
     const buttonRef = useRef(null);
     const [IsActive, setIsActive] = useState(false);
-    const [doctype, setDocType] = useState('Treatment Type')
+    const [doctype, setDocType] = useState('Treatment')
 
     const onClick = () => setIsActive(!IsActive);
 
@@ -37,7 +37,7 @@ function Dropdown( {updateDocType, doctypes} ){
     return(
         <div className="menu-container">
             <Button onClick={onClick} className="menu-trigger" ref={buttonRef}>
-                <span> {doctype} </span>
+                {doctype}
             </Button>
             <div ref={dropdownRef} className={`menu ${IsActive ? 'active' : 'inactive'}`}>
                 <ul>

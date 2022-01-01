@@ -11,7 +11,8 @@ class Home extends Component{
         this.state= { address : '',
                       doctype : '',
                       doctypes : ['Cardiologist', 'Therapist', 'Psychiatrist', 'Ophthalmologist',
-                                  'Neurologist', 'OBGYN']};
+                                  'Neurologist', 'OBGYN', 'Family Physician', 'Radiologist',
+                                  'Internist', 'Pediatrician']};
     }
     
     updateSearchData = (data) =>{

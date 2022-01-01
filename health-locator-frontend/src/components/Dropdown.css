@@ -4,8 +4,8 @@
     position: sticky;
     display: flex;
     align-items: center;
-    height: 60px;
-    width: 200px;
+    height: 7vh;
+    width: 25vh;
 }
 
 .menu-trigger {
@@ -16,39 +16,37 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 .02vh .1vh rgba(0, 0, 0, 0.3);
     vertical-align: middle;
     transition: box-shadow 0.4s ease;
-    text-align: center;
-    border-width: 1px;
+    border-width: 0.02vh;
     border-color: black;
     font-family: -apple-system;
     font-weight: lighter;
-
+    font-size: 3vh;
+    text-indent: 4vh;
 }
 
 .menu-trigger:hover {
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0.04vh 0.2vh rgba(0, 0, 0, 0.3);
   }
   
 .menu-trigger span {
-    font-weight: 700;
+    font-weight: lighter;
     vertical-align: middle;
-    font-size: 18px;
-    margin: 0 10px;
+    font-size: 2vh;
 }
 
 .menu {
     background: #fcfbf4;
-    border-radius: 8px;
+    border-radius: 1vh;
     position: absolute;
-    top: 60px;
+    top: 7vh;
     right: 0;
     width: 100%;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0.1vh 1vh rgba(0, 0, 0, 0.3);
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-20px);
     transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
     max-height: 0px;
     overflow: hidden;
@@ -58,7 +56,7 @@
 .menu.active {
     opacity: 1;
     visibility: visible;
-    max-height: 240px;
+    max-height: 28vh;
     overflow: auto;
 }
   
@@ -71,11 +69,11 @@
 
 .menu Button {
     width: 100%;
-    height: 60px;
-    font-size: 18px;
+    height: 7vh;
+    font-size: 2vh;
     outline-width: 0px;
     border-color: black;
-    border-width: .5px;
+    border-width: 0.01vh;
     cursor: pointer;
 
 }
